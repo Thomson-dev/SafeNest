@@ -24,7 +24,7 @@ export default function ClientLayout({ children }) {
       {isDashboard ? (
         <div className="flex ">
           <Sidebar />
-          <div className="flex-1 ml-6">
+          <div className="flex-1 md:ml-6">
             <DashboardNavbar />
             <main className="p-4">{children}</main>
           </div>

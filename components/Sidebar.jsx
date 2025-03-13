@@ -22,7 +22,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="w-64 min-h-screen bg-white border-r p-4">
+    <div className="w-64 min-h-screen hidden md:block bg-white border-r p-4">
       {/* Logo */}
       <div className="flex items-center gap-2 mb-10">
  
@@ -39,7 +39,7 @@ const Sidebar = () => {
               router.push(item.path);
             }}
             className={`flex items-center w-full mt-3  text-left px-4 py-4 rounded-lg transition-colors ${
-              active === item.name ? "bg-purple-100 font-bold" : "hover:bg-gray-100"
+              active === item.name ? "bg-[#e2fced] font-bold" : "hover:bg-gray-100"
             }`}
           >
             <span className="text-lg text-gray-700">{item.icon}</span>
@@ -49,7 +49,7 @@ const Sidebar = () => {
       </nav>
 
       {/* Chat Icon */}
-      <div className="absolute bottom-4 left-4 bg-purple-800 text-white p-3 rounded-full cursor-pointer">
+      <div className="absolute bottom-4 left-4 bg-[#2E8B57] text-white p-3 rounded-full cursor-pointer">
         <FaCommentDots size={20} />
       </div>
     </div>
