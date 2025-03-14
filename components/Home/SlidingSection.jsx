@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 
 const slides = [
   {
-    text: "Free In-App Transfers, Zero Withdrawal Charges. No Hidden Charges",
+    text: "Seamless Savings. Build Your Future with Automated Contributions.",
     bgColor: "bg-[#F5F5F5]",
   },
   {
-    text: "Saving Is Good. Investing Is Growth, And My Dear, You Need Both",
+    text: "Emergency Funds, When You Need Them Most. No Delays, No Hassle.",
     bgColor: "bg-[#F5F5F5]",
   },
   {
-    text: "Refer And Earn. Enjoy Cash Bonuses When You Refer Your Friends",
+    text: "Your Credit Score Matters. Unlock More Financial Opportunities.",
     bgColor: "bg-[#F5F5F5]",
   },
 ];
@@ -22,10 +22,10 @@ export default function SlidingCards() {
       <motion.div
         className="flex gap-8"
         animate={{
-          x: ["0%", "-30%", "0%"], // Smooth left-right sliding
+          x: ["-5%", "5%", "-5%"], // Small shake effect
         }}
         transition={{
-          duration: 10, // Slow smooth animation
+          duration: 4, // Smooth and subtle movement
           repeat: Infinity,
           repeatType: "reverse",
           ease: "easeInOut",
@@ -34,7 +34,7 @@ export default function SlidingCards() {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`w-[650px] h-[350px] rounded-xl flex items-center justify-between p-10 ${slide.bgColor}`}
+            className={`w-[600px] h-[350px] rounded-xl flex items-center justify-between p-10 ${slide.bgColor}`}
           >
             <p className="text-3xl font-bold text-gray-900 w-[60%] leading-snug">
               {slide.text}

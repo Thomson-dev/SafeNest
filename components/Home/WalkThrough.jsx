@@ -12,7 +12,7 @@ export default function Walkthrough() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          How to Use SafeNest in 4 Easy Steps
+          Get Started with SafeNest in 4 Simple Steps
         </motion.h2>
       </div>
 
@@ -42,7 +42,7 @@ export default function Walkthrough() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          Get Started Now
+          Start Saving Now
         </motion.button>
       </div>
     </section>
@@ -53,22 +53,22 @@ export default function Walkthrough() {
 const steps = [
   {
     icon: UserCheck,
-    title: "Step 1 - Sign Up",
-    description: "Create a free account with your email and phone number.",
+    title: "Step 1 - Sign Up Easily",
+    description: "Join SafeNest with just your phone number and start your journey to financial security.",
   },
   {
     icon: Globe,
-    title: "Step 2 - Navigate the Website",
-    description: "Easily access savings, loans, and insurance options from your dashboard.",
+    title: "Step 2 - Save Without Hassle",
+    description: "Deposit funds securely and build your savings effortlessly—no unnecessary transactions.",
   },
   {
     icon: ShieldCheck,
-    title: "Step 3 - Save & Insure with Ease",
-    description: "Set up savings plans and get insurance protection directly from your account.",
+    title: "Step 3 - Instant Emergency Access",
+    description: "Withdraw emergency funds whenever needed—no debt, no delays, just support.",
   },
   {
     icon: Smartphone,
-    title: "Step 4 - Access Your Account Anytime",
-    description: "Manage your finances via the website or dial *123# for quick USSD access.",
+    title: "Step 4 - Manage Anytime, Anywhere",
+    description: "Access your savings and withdrawals via the website, with USSD support coming soon!",
   },
 ];

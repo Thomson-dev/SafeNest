@@ -1,6 +1,6 @@
-"use client";
+'use client';
 import { motion } from "framer-motion";
-import { Briefcase, PiggyBank, Handshake } from "lucide-react";
+import { Briefcase, PiggyBank, ShieldCheck } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -13,7 +13,7 @@ export default function AboutSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Empowering Businesses, Elevating Futures
+          Helping Businesses Save & Stay Secure
         </motion.h2>
         <motion.p 
           className="text-lg text-gray-800 mt-4 max-w-3xl mx-auto"
@@ -21,9 +21,8 @@ export default function AboutSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          At SafeNest, we provide financial tools that help small businesses **secure, save, and grow**. 
-          From tailored insurance solutions to flexible savings and loan options, we're here to help you 
-          build a **stronger financial future**.
+          At SafeNest, we empower small businesses with simple and reliable financial tools. 
+          Save consistently, withdraw anytime, and access emergency funds when you need them.
         </motion.p>
       </div>
 
@@ -53,17 +52,17 @@ export default function AboutSection() {
 const cards = [
   {
     icon: Briefcase,
-    title: "Secure Your Business",
-    description: "Protect your assets with tailored insurance and financial security.",
+    title: "Secure Savings",
+    description: "Your money stays safe while you build financial stability for your business.",
   },
   {
     icon: PiggyBank,
-    title: "Save & Grow",
-    description: "Smart savings plans designed to help you maximize growth effortlessly.",
+    title: "Automated Savings",
+    description: "Easily set aside funds and watch your savings grow with ease.",
   },
   {
-    icon: Handshake,
-    title: "Easy Loans",
-    description: "Quick and flexible loan options with minimal stress, built for business success.",
+    icon: ShieldCheck,
+    title: "Emergency Funds",
+    description: "Access emergency funds instantly when unexpected expenses arise.",
   },
 ];

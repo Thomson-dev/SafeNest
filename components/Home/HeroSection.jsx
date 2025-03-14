@@ -5,15 +5,15 @@ import { motion } from 'framer-motion';
 
 const heroContent = [
   {
-    text: 'Secure & Protect Your Business',
+    text: 'Secure Your Savings, Secure Your Future',
     image: '/one.jpg',
   },
   {
-    text: 'Save Smart, Grow Fast',
+    text: 'Access Emergency Funds Anytime',
     image: '/4.png',
   },
   {
-    text: 'Quick Loans, No Stress',
+    text: 'Withdraw with Ease',
     image: '/3.jpeg',
   },
 ];
@@ -47,10 +47,12 @@ export default function HeroSection() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
           {heroContent[index].text}
         </h1>
-        <p className="text-lg text-gray-700 mt-4">A smarter way to save, invest, and grow your wealth.</p>
+        <p className="text-lg text-gray-700 mt-4">
+          A trusted savings platform built for SMEs and market women. Save with confidence, withdraw easily, and access emergency funds when you need them.
+        </p>
         <button className="mt-8 bg-[#2E8B57] text-white font-bold px-8 py-3 rounded-full text-lg transition-all hover:bg-[#FF8C00] hover:text-white hover:scale-110 shadow-lg">
           Get Started
         </button>
