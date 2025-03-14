@@ -5,17 +5,17 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    text: "SafeNest has been a game-changer for my business. I no longer worry about unexpected losses because I know my goods are insured. Their savings plan has also helped me grow in ways I never imagined!",
+    text: "SafeNest has transformed the way I save. With automated contributions, I don’t have to stress about putting money aside—it happens effortlessly. Now, I’m more financially secure than ever.",
     name: "GRACE DUNG",
     role: "MARKET WOMAN",
   },
   {
-    text: "Thanks to SafeNest, I’ve learned how to manage my finances better. I used to struggle with savings, but now I have a solid plan in place. I feel more in control and hopeful for the future.",
+    text: "When an urgent need arose, SafeNest’s emergency fund feature saved my business. No long waits, no complicated processes—just quick access to the money I needed.",
     name: "MAMA TUNDE",
     role: "TRADER",
   },
   {
-    text: "With SafeNest, I finally have the financial stability I always wished for. Their easy loan system helped me expand my business without stress.",
+    text: "SafeNest helped me build my credit score, making it easier to access loans for business expansion. I never knew my financial habits could open doors to bigger opportunities.",
     name: "CHINWE OBI",
     role: "SMALL BUSINESS OWNER",
   },
