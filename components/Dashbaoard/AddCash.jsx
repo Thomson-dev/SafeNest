@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus } from "react-icons/fa";
@@ -10,6 +11,7 @@ export default function AddCash() {
 
   const toggleModal = () => setIsOpen(!isOpen);
 
+  
   const handleCustomPrice = async (e) => {
     e.preventDefault();
     
@@ -21,14 +23,16 @@ export default function AddCash() {
     }
 
     try {
+      setLoading(true);
+      const token = localStorage.getItem("token"); // Retrieve the token from localStorage
       const response = await axios.post(
-        "http://localhost:5000/api/deposit", // Adjust URL based on your backend
+        "http://localhost:8000/api/deposit", // Adjust URL based on your backend
         { amount: amountValue }, // Sending amount to the backend
         {
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`, // Include the token in the request headers
           },
-          withCredentials: true, // Include this if using cookies for auth
         }
       );
 
@@ -41,6 +45,8 @@ export default function AddCash() {
     } catch (error) {
       console.error("Error processing payment:", error);
       alert(error.response?.data?.message || "Something went wrong");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -72,7 +78,7 @@ export default function AddCash() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-opacity-50 flex justify-center items-center"
+            className="fixed inset-0  bg-opacity-50 flex justify-center items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -109,10 +115,10 @@ export default function AddCash() {
                   </button>
                   <button
                     type="submit"
-                    onClick={handleCustomPrice}
                     className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                    disabled={loading}
                   >
-                    Pay
+                    {loading ? "Processing..." : "Pay"}
                   </button>
                 </div>
               </form>

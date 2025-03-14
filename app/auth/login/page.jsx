@@ -18,7 +18,7 @@ const Login = () => {
     const password = formData.get("password");
 
     try {
-      const response = await fetch("https://your-api-url.com/login", {
+      const response = await fetch("http://localhost:8000/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,10 +27,11 @@ const Login = () => {
       });
 
       const data = await response.json();
+      console.log(data)
 
       if (response.ok) {
         // Store token
-        localStorage.setItem("token", data.token);
+        localStorage.setItem("token", data.accessToken);
 
         // Show success toast
         toast.success("Login successful!", {
@@ -57,7 +58,7 @@ const Login = () => {
     <div className="h-screen bg-cover bg-center login-background">
       <ToastContainer />
       <div className="flex items-center justify-center h-full bg-opacity-50">
-        <div className="bg-white p-8 min-h-[60vh] rounded-xl w-[32%] shadow-sm">
+        <div className="bg-white p-8 min-h-[60vh] rounded-xl w-[30rem] shadow-sm">
           <h2 className="text-2xl text-center font-bold mb-4">
             Log in to your account
           </h2>
