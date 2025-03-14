@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   const menuItems = [
     { name: "Dashboard", icon: <FaHome />, path: "/dashboard" },
-    { name: "Savings", icon: <FaPiggyBank />, path: "/savings" },
+    { name: "Savings", icon: <FaPiggyBank />, path: "/dashboard/savings" },
    
     { name: "Investments", icon: <FaChartLine />, path: "/investments" },
     { name: "Loan", icon: <FaMoneyCheckAlt />, path: "/loan" },
