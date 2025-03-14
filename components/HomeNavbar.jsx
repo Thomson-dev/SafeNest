@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const navLinks = [
-  { href: '#', label: 'Save & Invest' },
+  { href: '#', label: 'Save & Insure' },
   { href: '#', label: 'Loan' },
   { href: '#', label: 'Learn' },
 

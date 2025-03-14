@@ -11,7 +11,6 @@ export default function AddCash() {
 
   const toggleModal = () => setIsOpen(!isOpen);
 
-  
   const handleCustomPrice = async (e) => {
     e.preventDefault();
     

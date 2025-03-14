@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaHome, FaPiggyBank, FaWallet, FaChartLine, FaMoneyCheckAlt, FaCreditCard, FaUsers, FaUser, FaInfoCircle, FaSignOutAlt, FaCommentDots } from "react-icons/fa";
+import Link from "next/link";
 
 const Sidebar = () => {
   const router = useRouter();
@@ -11,13 +12,13 @@ const Sidebar = () => {
     { name: "Dashboard", icon: <FaHome />, path: "/dashboard" },
     { name: "Savings", icon: <FaPiggyBank />, path: "/dashboard/savings" },
    
-    { name: "Investments", icon: <FaChartLine />, path: "/investments" },
-    { name: "Loan", icon: <FaMoneyCheckAlt />, path: "/loan" },
+    // { name: "Insurance", icon: <FaChartLine />, path: "/dashboard/insurance" },
+    // { name: "Loan", icon: <FaMoneyCheckAlt />, path: "/loan" },
  
 
     { name: "Account", icon: <FaUser />, path: "/account" },
     { name: "Portfolio", icon: <FaChartLine />, path: "/portfolio" },
-    { name: "About HerVest", icon: <FaInfoCircle />, path: "/about" },
+    { name: "About SafeNest", icon: <FaInfoCircle />, path: "/about" },
     { name: "Logout", icon: <FaSignOutAlt />, path: "/logout" },
   ];
 
@@ -25,8 +26,9 @@ const Sidebar = () => {
     <div className="w-64 min-h-screen hidden md:block bg-white border-r p-4">
       {/* Logo */}
       <div className="flex items-center gap-2 mb-10">
- 
-        <h1 className="text-2xl text-center font-bold ">SafeNest</h1>
+      <Link href="/">
+          <h1 className="text-2xl text-center font-bold cursor-pointer">SafeNest</h1>
+        </Link>
       </div>
 
       {/* Menu Items */}
