@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ClientLayout from "@/components/clientLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "SafeNest",
-  description: "A secure platform for savings, insurance, and loans",
+  title: "CashFlow Co-Pilot",
+  description: "AI-powered cashflow forecasting for Nigerian SMEs. Never run out of cash again.",
 };
 
 export default function RootLayout({ children }) {
@@ -23,7 +22,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ClientLayout>{children}</ClientLayout>
+        {children}
       </body>
     </html>
   );
